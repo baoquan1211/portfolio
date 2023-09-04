@@ -14,7 +14,7 @@ import { useTheme } from "next-themes";
 import LOGO from "@/assets/svg/logo.svg";
 import LIGHT_LOGO from "@/assets/svg/out-line-logo.svg";
 
-const NavBar = () => {
+const Header = () => {
   const theme = useTheme();
   const routes = [
     {
@@ -36,8 +36,8 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="flex justify-center w-full">
-      <div className="fixed font-fira w-full p-4 xl:p-0 xl:w-[80%] max-w-[1024px] h-16 z-50 flex justify-between items-center py-2 bg-background ">
+    <header className="flex sticky top-0 flex-col items-center justify-center w-full z-50 border-b-1 border-secondary">
+      <div className="font-fira w-full xl:w-[80%] p-4 xl:p-0 max-w-[1024px] h-16 flex justify-between items-center py-2 bg-background/90">
         <div className="flex items-center gap-x-2 font-bold">
           <Image
             width={16}
@@ -57,7 +57,7 @@ const NavBar = () => {
           <Link
             href="/"
             className={cn(
-              "md:block text-lg md:text-3xl font-bold dark:text-white text-text select-none"
+              "md:block text-lg md:text-lg font-bold dark:text-white text-text select-none"
             )}
           >
             quan-qb
@@ -66,7 +66,11 @@ const NavBar = () => {
         <Menu className="md:hidden" />
         <div className="hidden md:flex items-center gap-x-4">
           {routes.map((route) => (
-            <Link key={route.title} href={route.href} className="select-none">
+            <Link
+              key={route.title}
+              href={route.href}
+              className={`select-none after:w-0 hover:after:w-full after:transition-all after:ease-in-out after:duration-300 after:h-[1px] after:bg-primary after:block`}
+            >
               <span className="text-primary">#</span>
               {route.title}
             </Link>
@@ -76,8 +80,8 @@ const NavBar = () => {
           <UserButton afterSignOutUrl="/sign-in" />
         </div>
       </div>
-    </nav>
+    </header>
   );
 };
 
-export default NavBar;
+export default Header;

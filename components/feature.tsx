@@ -8,7 +8,7 @@ import OUTLINE_LOGO from "@/assets/svg/big-logo.svg";
 
 const Feature = () => {
   return (
-    <div className="max-w-[1024px] flex flex-col md:flex-row justify-center p-4 xl:p-0">
+    <div className="max-w-[1024px] flex flex-col md:flex-row justify-center gap-2 p-4 xl:p-0">
       <div className="flex flex-col font-fira gap-y-6">
         <h1 className="text-2xl font-semibold w-fit">
           Quan is a <span className="text-primary">IT student</span> and <br />
