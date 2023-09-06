@@ -19,15 +19,15 @@ const Header = () => {
   const routes = [
     {
       title: "home",
-      href: "/",
+      href: "#home",
     },
     {
       title: "works",
-      href: "/",
+      href: "#work",
     },
     {
       title: "about-me",
-      href: "/",
+      href: "#skill",
     },
     {
       title: "contact",
@@ -36,8 +36,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="flex sticky top-0 flex-col items-center justify-center w-full z-50 border-b-1 border-secondary">
-      <div className="font-fira w-full xl:w-[80%] p-4 xl:p-0 max-w-[1024px] h-16 flex justify-between items-center py-2 bg-background/90">
+    <header className="flex sticky top-0 flex-col items-center justify-center w-full z-50 border-b-1 border-secondary bg-background/90">
+      <div className="font-fira w-full xl:w-[80%] p-4 xl:p-0 max-w-[1024px] h-16 flex justify-between items-center py-2">
         <div className="flex items-center gap-x-2 font-bold">
           <Image
             width={16}
@@ -64,7 +64,7 @@ const Header = () => {
           </Link>
         </div>
         <Menu className="md:hidden" />
-        <div className="hidden md:flex items-center gap-x-4">
+        <div className="hidden md:flex items-center gap-x-10">
           {routes.map((route) => (
             <Link
               key={route.title}
@@ -76,8 +76,8 @@ const Header = () => {
             </Link>
           ))}
 
-          <ModeToggle></ModeToggle>
-          <UserButton afterSignOutUrl="/sign-in" />
+          {/* <ModeToggle></ModeToggle> */}
+          {/* <UserButton afterSignOutUrl="/sign-in" /> */}
         </div>
       </div>
     </header>

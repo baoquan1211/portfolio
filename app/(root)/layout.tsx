@@ -6,7 +6,7 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
       <Header />
-      <main className="pt-16">{children}</main>
+      <main>{children}</main>
       <Footer />
     </div>
   );

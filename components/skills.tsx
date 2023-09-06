@@ -5,7 +5,10 @@ import DOTS from "@/assets/svg/dots.svg";
 import LOGO from "@/assets/svg/big-logo.svg";
 const Skill = () => {
   return (
-    <section className="max-w-[1024px] w-full p-4 xl:p-0 xl:w-[80%] leading-none">
+    <section
+      className="max-w-[1024px] w-full xl:w-[80%] leading-none mt-6 lg:mt-44 px-4 xl:px-0"
+      id="skill"
+    >
       <div className="w-full flex items-center gap-x-4">
         <h1 className="font-fira text-[32px] leading-none">
           <span className="text-primary">#</span>skill
