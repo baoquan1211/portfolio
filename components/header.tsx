@@ -1,37 +1,40 @@
 "use client";
 
-import React from "react";
-import { Divide, Menu, Sparkles } from "lucide-react";
+import React, { useEffect } from "react";
+import { Menu } from "lucide-react";
 import Link from "next/link";
-
 import { cn } from "@/lib/utils";
-import { UserButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "./mode-toggle";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-
+import { useRef, useState } from "react";
 import LOGO from "@/assets/svg/logo.svg";
-import LIGHT_LOGO from "@/assets/svg/out-line-logo.svg";
+import LIGHT_LOGO from "@/assets/svg/logo-purple.svg";
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
-  const theme = useTheme();
   const routes = [
     {
-      title: "home",
-      href: "#home",
-    },
-    {
-      title: "works",
+      title: "projects",
       href: "#work",
     },
     {
-      title: "about-me",
+      title: "skill",
       href: "#skill",
     },
     {
+      title: "about-me",
+      href: "#about-me",
+    },
+    {
       title: "contact",
-      href: "/",
+      href: "#contact",
     },
   ];
 
@@ -42,7 +45,7 @@ const Header = () => {
           <Image
             width={16}
             height={16}
-            src={LOGO}
+            src={LIGHT_LOGO}
             alt="logo"
             className="dark:hidden fill-primary select-none"
           />
@@ -55,7 +58,7 @@ const Header = () => {
           />
 
           <Link
-            href="/"
+            href="#home"
             className={cn(
               "md:block text-lg md:text-lg font-bold dark:text-white text-text select-none"
             )}
@@ -63,7 +66,41 @@ const Header = () => {
             quan-qb
           </Link>
         </div>
-        <Menu className="md:hidden" />
+        {/* <Button
+          variant={"ghost"}
+          size={"circle"}
+          className="p-0"
+          onClick={() => {
+            setBurger(true);
+          }}
+        >
+          <Menu />
+        </Button>
+        {burger ? (
+          <div className="absolute h-[calc(100dvh-64px)] w-full -bottom-16">
+            hello
+          </div>
+        ) : null} */}
+        <DropdownMenu>
+          <DropdownMenuTrigger className="md:hidden">
+            <Menu />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="p-4">
+            {routes.map((route) => (
+              <Link
+                key={route.title}
+                href={route.href}
+                className={`select-none after:w-0 hover:after:w-fit after:transition-all after:ease-in-out after:duration-300 after:h-[1px] after:bg-primary after:block`}
+              >
+                <span className="text-primary">{"# "}</span>
+                {route.title}
+              </Link>
+            ))}
+
+            <ModeToggle />
+          </DropdownMenuContent>
+        </DropdownMenu>
+
         <div className="hidden md:flex items-center gap-x-10">
           {routes.map((route) => (
             <Link
@@ -75,9 +112,7 @@ const Header = () => {
               {route.title}
             </Link>
           ))}
-
-          {/* <ModeToggle></ModeToggle> */}
-          {/* <UserButton afterSignOutUrl="/sign-in" /> */}
+          <ModeToggle />
         </div>
       </div>
     </header>

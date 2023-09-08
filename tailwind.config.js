@@ -16,7 +16,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      fira: ["Fira Code", "monospace"],
+      fira: ["var(--font-fira)"],
     },
     extend: {
       colors: {

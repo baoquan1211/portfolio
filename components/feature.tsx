@@ -1,14 +1,17 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-
+import Link from "next/link";
 import IMG from "@/assets/svg/black-guy.svg";
 import DOTS from "@/assets/svg/dots.svg";
 import OUTLINE_LOGO from "@/assets/svg/big-logo.svg";
 
 const Feature = () => {
   return (
-    <section className="pt-6 lg:pt-40 max-w-[1024px] flex flex-col md:flex-row justify-center gap-2 px-4 xl:px-0">
+    <section
+      id="home"
+      className="pt-16 lg:pt-24 max-w-[1024px] flex flex-col md:flex-row justify-center gap-2 px-4 xl:px-0"
+    >
       <div className="flex flex-col font-fira gap-y-6">
         <h1 className="text-2xl font-semibold w-fit">
           Quan is a <span className="text-primary">IT student</span> and <br />
@@ -19,7 +22,7 @@ const Feature = () => {
         </h3>
 
         <Button variant="square" size="fit">
-          Contact me
+          <Link href={"#contact"}>Contact me</Link>
         </Button>
       </div>
       <div className="relative">
@@ -35,7 +38,7 @@ const Feature = () => {
             <div className="w-3 h-3 bg-primary " />
             <div className="font-fira font-medium text-secondary h-fit text-[16px] leading-none">
               Current working on{" "}
-              <span className="font-bold text-white">FUJINET</span>
+              <span className="font-bold text-foreground">FUJINET</span>
             </div>
           </div>
         </div>

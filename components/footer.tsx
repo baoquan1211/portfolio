@@ -3,7 +3,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import LOGO from "@/assets/svg/logo.svg";
-import Logo from "@/components/logo";
+import PURPLE_LOGO from "@/assets/svg/logo-purple.svg";
 
 import LINKEDIN from "@/assets/svg/linkedin.svg";
 import GITHUB from "@/assets/svg/github.svg";
@@ -11,16 +11,23 @@ import { Facebook } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center justify-center mt-8 py-6 border-t-1 border-secondary gap-y-6">
+    <footer className="flex flex-col items-center justify-center mt-36 py-6 border-t-1 border-secondary gap-y-6">
       <div className="flex max-w-[1024px] justify-between w-[80%]">
         <div className="flex flex-col">
           <div className="flex items-center gap-x-2 font-bold">
             <Image
               width={16}
               height={16}
-              src={LOGO}
+              src={PURPLE_LOGO}
               alt="logo"
-              className="select-none"
+              className="select-none dark:hidden"
+            />
+            <Image
+              width={16}
+              height={16}
+              src={LOGO}
+              alt="dark-logo"
+              className="select-none hidden dark:block"
             />
             <h1 className="text-lg md:text-[16px] font-fira font-semibold dark:text-white">
               quan-qb{" "}
@@ -37,7 +44,7 @@ const Footer = () => {
           <h1 className="text-lg md:text-2xl font-fira font-normal dark:text-white">
             Media
           </h1>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 select-none">
             <Link href="https://github.com/baoquan1211">
               <Image src={GITHUB} alt="github" />
             </Link>

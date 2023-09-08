@@ -6,7 +6,7 @@ import LOGO from "@/assets/svg/big-logo.svg";
 const Skill = () => {
   return (
     <section
-      className="max-w-[1024px] w-full xl:w-[80%] leading-none mt-6 lg:mt-44 px-4 xl:px-0"
+      className="max-w-[1024px] w-full xl:w-[80%] leading-none pt-24 px-4 xl:px-0"
       id="skill"
     >
       <div className="w-full flex items-center gap-x-4">
@@ -15,7 +15,7 @@ const Skill = () => {
         </h1>
         <div className="w-[240px] bg-primary h-[1px]"></div>
       </div>
-      <div className="flex justify-center xl:justify-between gap-6 mt-3">
+      <div className="flex justify-center xl:justify-between gap-6 mt-10">
         <div className="gap-6 items-center hidden lg:flex">
           <div className="flex flex-col gap-16 ml-4">
             <Image src={DOTS} alt="dots" />
@@ -31,7 +31,7 @@ const Skill = () => {
         </div>
         <div className="flex flex-col md:flex-row gap-3 justify-center items-center md:items-start">
           <div className="flex flex-col border-1 border-secondary leading-5 font-fira text-secondary h-fit w-fit">
-            <div className="border-b-1 border-secondary font-semibold text-white py-1 px-2">
+            <div className="border-b-1 border-secondary font-semibold text-foreground py-1 px-2">
               Databases
             </div>
             <p className="font-normal py-1 px-2">
@@ -40,7 +40,7 @@ const Skill = () => {
           </div>
           <div className="flex lg:flex-col gap-3">
             <div className="flex flex-col border-1 border-secondary leading-5 font-fira text-secondary h-fit">
-              <div className="border-b-1 border-secondary font-semibold text-white py-1 px-2">
+              <div className="border-b-1 border-secondary font-semibold text-foreground py-1 px-2">
                 Languages
               </div>
               <p className="font-normal py-1 px-2">
@@ -48,7 +48,7 @@ const Skill = () => {
               </p>
             </div>
             <div className="flex flex-col border-1 border-secondary leading-5 font-fira text-secondary h-fit">
-              <div className="border-b-1 border-secondary font-semibold text-white py-1 px-2">
+              <div className="border-b-1 border-secondary font-semibold text-foreground py-1 px-2">
                 Others
               </div>
               <p className="font-normal py-1 px-2">
@@ -59,7 +59,7 @@ const Skill = () => {
 
           <div className="flex lg:flex-col gap-3">
             <div className="flex flex-col border-1 border-secondary leading-5 font-fira text-secondary h-fit">
-              <div className="border-b-1 border-secondary font-semibold text-white py-1 px-2">
+              <div className="border-b-1 border-secondary font-semibold text-foreground py-1 px-2">
                 Frameworks
               </div>
               <p className="font-normal py-1 px-2">
@@ -67,7 +67,7 @@ const Skill = () => {
               </p>
             </div>
             <div className="flex flex-col border-1 border-secondary leading-5 font-fira text-secondary h-fit">
-              <div className="border-b-1 border-secondary font-semibold text-white py-1 px-2">
+              <div className="border-b-1 border-secondary font-semibold text-foreground py-1 px-2">
                 Tools
               </div>
               <p className="font-normal py-1 px-2">

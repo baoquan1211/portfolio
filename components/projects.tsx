@@ -24,7 +24,7 @@ const Projects = () => {
   return (
     <section
       id="work"
-      className="lg:pt-24 px-4 xl:px-0 max-w-[1024px] w-full xl:w-[80%]"
+      className="pt-24 px-4 xl:px-0 max-w-[1024px] w-full xl:w-[80%]"
     >
       <div className="w-full flex items-center gap-x-4">
         <h1 className="font-fira text-[32px] leading-none">
@@ -32,7 +32,7 @@ const Projects = () => {
         </h1>
         <div className="w-[240px] bg-primary h-[1px]"></div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 justify-between w-full">
+      <div className="mt-10 grid grid-cols-2 md:grid-cols-3 justify-center gap-3 w-full">
         <ProjectCard project={project} />
         <ProjectCard project={project} />
         <ProjectCard project={project} />

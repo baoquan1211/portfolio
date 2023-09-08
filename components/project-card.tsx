@@ -20,7 +20,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         />
       </div>
       <div className="flex gap-2 p-4 border-b-1 border-secondary overflow-hidden">
-        <p className="font-fira font-normal text-lg text-secondary leading-5">
+        <p className="font-fira font-normal text-base text-secondary leading-5">
           {project.tech}
         </p>
       </div>
