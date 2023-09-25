@@ -10,14 +10,22 @@ export interface IProject {
   live?: string;
 }
 
-const project: IProject = {
-  thumbnail: "/prj1.png",
+const oldie: IProject = {
+  thumbnail: "/oldie.png",
   discription: "Old stuff for sale website",
   name: "Oldie",
-  //   tech: ["ReactJS", "NodeJS", "HTML", "TailwindCSS", "MongoDB"],
   tech: "ReactJS NodeJS HTML TailwindCSS MongoDB",
   git: "https://github.com/baoquan1211/Oldie",
   live: "https://oldie.vercel.app/",
+};
+
+const fGPT: IProject = {
+  thumbnail: "/f-gpt.png",
+  discription: "Multiple AI platforms chating.",
+  name: "F-GPT",
+  tech: "ReactJS Django HTML TailwindCSS PostgreSQL",
+  git: "https://github.com/baoquan1211/f-gpt-webapp",
+  live: "https://f-gpt-webapp.vercel.app/",
 };
 
 const Projects = () => {
@@ -33,9 +41,8 @@ const Projects = () => {
         <div className="w-[240px] bg-primary h-[1px]"></div>
       </div>
       <div className="mt-10 grid grid-cols-2 md:grid-cols-3 justify-center gap-3 w-full">
-        <ProjectCard project={project} />
-        <ProjectCard project={project} />
-        <ProjectCard project={project} />
+        <ProjectCard project={oldie} />
+        <ProjectCard project={fGPT} />
       </div>
     </section>
   );
