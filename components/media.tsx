@@ -14,7 +14,7 @@ const mediaContact = [
   {
     name: "linkedin",
     link: "https://www.linkedin.com/in/b%E1%BA%A3o-qu%C3%A2n-qu%C3%A1ch-91171227a/",
-    component: <Image src={GITHUB} alt="linkedin" />,
+    component: <Image src={LINKEDIN} alt="linkedin" />,
   },
   {
     name: "facebook",

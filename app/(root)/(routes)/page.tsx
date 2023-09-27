@@ -10,7 +10,7 @@ import Contact from "@/components/contact";
 
 const RootPage = () => {
   return (
-    <section className="flex flex-col justify-center items-center relative">
+    <section className="flex flex-col justify-center items-center relative overflow-x-hidden">
       <Media />
       <Feature />
       <Quote />

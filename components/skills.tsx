@@ -1,11 +1,17 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
-
 import DOTS from "@/assets/svg/dots.svg";
 import LOGO from "@/assets/svg/big-logo.svg";
+import SkillCard from "./skill-card";
+import { motion } from "framer-motion";
+
 const Skill = () => {
+  const constraintsRef = React.useRef(null);
+
   return (
-    <section
+    <div
       className="max-w-[1024px] w-full xl:w-[80%] leading-none pt-24 px-4 xl:px-0"
       id="skill"
     >
@@ -15,69 +21,82 @@ const Skill = () => {
         </h1>
         <div className="w-[240px] bg-primary h-[1px]"></div>
       </div>
-      <div className="flex justify-center xl:justify-between gap-6 mt-10">
-        <div className="gap-6 items-center hidden lg:flex">
+      <motion.div
+        initial={{ opacity: 0, translateY: 200 }}
+        whileInView={{ opacity: 1, translateY: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex justify-center xl:justify-between gap-6 mt-10"
+      >
+        <motion.div
+          className="gap-6 items-center hidden lg:flex relative border-dashed border-1 border-transparent p-3 active:border-primary transition-500"
+          ref={constraintsRef}
+        >
           <div className="flex flex-col gap-16 ml-4">
-            <Image src={DOTS} alt="dots" />
-            <div className="h-16 w-16 border-1 border-secondary ml-2" />
+            <motion.div drag dragConstraints={constraintsRef}>
+              <Image src={DOTS} alt="dots" className="pointer-events-none" />
+            </motion.div>
+            <motion.div
+              drag
+              dragConstraints={constraintsRef}
+              className="h-16 w-16 border-1 border-secondary ml-2 p-1 text-secondary flex justify-center items-center text-xs hover:text-primary hover:border-primary"
+            >
+              Drag me
+            </motion.div>
           </div>
-          <div className="h-24 w-24 mt-5">
-            <Image src={LOGO} alt="logo" />
-          </div>
+          <motion.div
+            drag
+            dragConstraints={constraintsRef}
+            className="h-24 w-24 mt-5"
+          >
+            <Image src={LOGO} alt="logo" className="pointer-events-none" />
+          </motion.div>
           <div className="flex flex-col gap-10 items-end">
-            <div className="h-24 w-24 border-1 border-secondary" />
-            <Image src={DOTS} alt="dots" className="mb-4" />
+            <motion.div
+              drag
+              dragConstraints={constraintsRef}
+              className="h-24 w-24 border-1 border-secondary text-secondary flex justify-center items-center hover:text-primary hover:border-primary text-xs"
+            >
+              Drag me too
+            </motion.div>
+            <motion.div drag dragConstraints={constraintsRef}>
+              <Image
+                src={DOTS}
+                alt="dots"
+                className="mb-4 pointer-events-none stroke-black"
+              />
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
         <div className="flex flex-col md:flex-row gap-3 justify-center items-center md:items-start">
-          <div className="flex flex-col border-1 border-secondary leading-5 font-fira text-secondary h-fit w-fit">
-            <div className="border-b-1 border-secondary font-semibold text-foreground py-1 px-2">
-              Databases
-            </div>
-            <p className="font-normal py-1 px-2">
-              SQLServer Oracle <br /> PostgreDB MySQL <br /> MongoDB Redis
-            </p>
-          </div>
+          <SkillCard
+            title="Databases"
+            items={["SQLServer Oracle", "PostgreDB MySQL", "MongoDB Redis"]}
+          />
           <div className="flex lg:flex-col gap-3">
-            <div className="flex flex-col border-1 border-secondary leading-5 font-fira text-secondary h-fit">
-              <div className="border-b-1 border-secondary font-semibold text-foreground py-1 px-2">
-                Languages
-              </div>
-              <p className="font-normal py-1 px-2">
-                TypeScript C++ <br /> Python C#
-              </p>
-            </div>
-            <div className="flex flex-col border-1 border-secondary leading-5 font-fira text-secondary h-fit">
-              <div className="border-b-1 border-secondary font-semibold text-foreground py-1 px-2">
-                Others
-              </div>
-              <p className="font-normal py-1 px-2">
-                HTML CSS SCSS <br /> TailwindCSS <br /> REST
-              </p>
-            </div>
+            <SkillCard
+              title="Languages"
+              items={["TypeScript C++", "Python C#"]}
+            />
+
+            <SkillCard
+              title="Others"
+              items={["HTML CSS SCSS", "TailwindCSS", "REST"]}
+            />
           </div>
 
           <div className="flex lg:flex-col gap-3">
-            <div className="flex flex-col border-1 border-secondary leading-5 font-fira text-secondary h-fit">
-              <div className="border-b-1 border-secondary font-semibold text-foreground py-1 px-2">
-                Frameworks
-              </div>
-              <p className="font-normal py-1 px-2">
-                NextJS <br /> ReactJS ExpressJS <br /> Django .NET
-              </p>
-            </div>
-            <div className="flex flex-col border-1 border-secondary leading-5 font-fira text-secondary h-fit">
-              <div className="border-b-1 border-secondary font-semibold text-foreground py-1 px-2">
-                Tools
-              </div>
-              <p className="font-normal py-1 px-2">
-                VSCode PyCharm Jira <br /> Figma Git <br /> Postman
-              </p>
-            </div>
+            <SkillCard
+              title="Frameworks"
+              items={["NextJS", "ReactJS ExpressJS", "Django .NET"]}
+            />
+            <SkillCard
+              title="Tools"
+              items={["VSCode PyCharm Jira", "Figma Git", "Postman Docker"]}
+            />
           </div>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </div>
   );
 };
 

@@ -4,11 +4,9 @@ import React, { useEffect } from "react";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import { ModeToggle } from "./mode-toggle";
 import Image from "next/image";
-import { useTheme } from "next-themes";
-import { useRef, useState } from "react";
+
 import LOGO from "@/assets/svg/logo.svg";
 import LIGHT_LOGO from "@/assets/svg/logo-purple.svg";
 
@@ -21,7 +19,7 @@ import {
 const Header = () => {
   const routes = [
     {
-      title: "projects",
+      title: "project",
       href: "#work",
     },
     {
@@ -66,21 +64,6 @@ const Header = () => {
             quan-qb
           </Link>
         </div>
-        {/* <Button
-          variant={"ghost"}
-          size={"circle"}
-          className="p-0"
-          onClick={() => {
-            setBurger(true);
-          }}
-        >
-          <Menu />
-        </Button>
-        {burger ? (
-          <div className="absolute h-[calc(100dvh-64px)] w-full -bottom-16">
-            hello
-          </div>
-        ) : null} */}
         <DropdownMenu>
           <DropdownMenuTrigger className="md:hidden">
             <Menu />
@@ -97,7 +80,7 @@ const Header = () => {
               </Link>
             ))}
 
-            <ModeToggle />
+            {/* <ModeToggle /> */}
           </DropdownMenuContent>
         </DropdownMenu>
 
@@ -112,7 +95,7 @@ const Header = () => {
               {route.title}
             </Link>
           ))}
-          <ModeToggle />
+          {/* <ModeToggle /> */}
         </div>
       </div>
     </header>

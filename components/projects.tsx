@@ -40,7 +40,7 @@ const Projects = () => {
         </h1>
         <div className="w-[240px] bg-primary h-[1px]"></div>
       </div>
-      <div className="mt-10 grid grid-cols-2 md:grid-cols-3 justify-center gap-3 w-full">
+      <div className="mt-10 flex flex-col sm:grid grid-flow-col gap-6 md:gap-12 sm:justify-between md:justify-start items-center sm:items-stretch w-full">
         <ProjectCard project={oldie} />
         <ProjectCard project={fGPT} />
       </div>

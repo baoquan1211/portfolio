@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 import LINKEDIN from "@/assets/svg/linkedin.svg";
 import MAIL from "@/assets/svg/email.svg";
 
@@ -17,8 +17,14 @@ const Contact = () => {
         </h1>
         <div className="w-[240px] bg-primary h-[1px]"></div>
       </div>
-      <div className="mt-10 font-fira">
-        <div className="flex flex-col lg:flex-row justify-between gap-4">
+
+      <motion.div
+        initial={{ opacity: 0, translateX: 200 }}
+        whileInView={{ opacity: 1, translateX: 0 }}
+        transition={{ duration: 0.5 }}
+        className="mt-10 font-fira"
+      >
+        <div className="flex flex-col lg:flex-row justify-between gap-6">
           <h1 className=" text-secondary">
             {
               "If you have any question or request, please don't hesitate to contact me"
@@ -38,7 +44,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

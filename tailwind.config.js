@@ -19,6 +19,9 @@ module.exports = {
       fira: ["var(--font-fira)"],
     },
     extend: {
+      screens: {
+        xs: "400",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

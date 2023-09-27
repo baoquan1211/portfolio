@@ -9,9 +9,21 @@ body,
   scroll-behavior: smooth;
 }
 
+.transition-200 {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.transition-300 {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.transition-500 {
+  @apply transition-all duration-500 ease-in-out;
+}
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 100% 100%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -83,5 +95,23 @@ body,
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+.cursor {
+  height: 16px;
+  width: 16px;
+  border-color: hsl(var(--primary));
+  border-width: 2px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+
+@media screen and (min-width: 1024px) {
+  * {
+    cursor: none;
   }
 }

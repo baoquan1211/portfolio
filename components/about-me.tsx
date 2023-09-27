@@ -4,6 +4,8 @@ import Image from "next/image";
 import BLACK_GUY from "@/assets/svg/black-guy-2.svg";
 import DOTS from "@/assets/svg/dots.svg";
 
+import { motion } from "framer-motion";
+
 const AboutMe = () => {
   return (
     <section
@@ -18,7 +20,12 @@ const AboutMe = () => {
           <div className="flex-grow bg-primary h-[1px]"></div>
         </div>
 
-        <p className="font-fira font-normal text-secondary lg:max-w-[500px] mt-10">
+        <motion.p
+          initial={{ opacity: 0, translateY: 200 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          transition={{ duration: 0.5 }}
+          className="font-fira font-normal text-secondary lg:max-w-[500px] mt-10"
+        >
           Nice to meet you, {"I’m"} Quach Bao Quan! <br /> <br />
           {"I'm"} a dedicated IT student at HCMUS{" "}
           {"(Ho Chi Minh City University of Science)"}, on the path to becoming
@@ -31,13 +38,18 @@ const AboutMe = () => {
           seamless experiences. I have experience with HTML, CSS, JavaScript,
           Python, and more, always staying up-to-date with the latest
           technologies.
-        </p>
+        </motion.p>
       </div>
-      <div className="hidden lg:block relative">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 4 }}
+        className="hidden lg:block relative"
+      >
         <Image src={BLACK_GUY} alt="black-guy-2" />
         <Image src={DOTS} alt="dots" className="absolute top-8 left-8" />
         <Image src={DOTS} alt="dots" className="absolute bottom-8 right-9" />
-      </div>
+      </motion.div>
     </section>
   );
 };

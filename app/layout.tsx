@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-
+import { cn } from "@/lib/utils";
 const fira = Fira_Code({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={fira.variable}>
+      <body className={cn(fira.variable, "overflow-x-hidden cursor-fancy")}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
         </ThemeProvider>

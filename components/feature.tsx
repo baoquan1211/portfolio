@@ -15,14 +15,14 @@ const Feature = () => {
       <div className="flex flex-col font-fira gap-y-6">
         <h1 className="text-2xl font-semibold w-fit">
           Quan is a <span className="text-primary">IT student</span> and <br />
-          <span className="text-primary">soft-ware developer</span> intern.
+          <span className="text-primary">soft-ware developer</span> fresher.
         </h1>
-        <h3 className=" font-extralight text-secondary">
-          He crafts responsive websites where technologies meet creativity
+        <h3 className="font-extralight text-secondary">
+          He dedicates himself to developing his IT career every day.
         </h3>
 
         <Button variant="square" size="fit">
-          <Link href={"#contact"}>Contact me</Link>
+          Download my resume !!!
         </Button>
       </div>
       <div className="relative">
