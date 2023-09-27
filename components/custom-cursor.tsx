@@ -4,7 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const CustomCursor = () => {
-  const screenWidth: number = window.innerWidth;
+  let screenWidth = 100;
+  if (typeof window !== "undefined") screenWidth = window.innerWidth;
   const [mousePosition, setMousePosition] = React.useState({
     x: 0,
     y: 0,
