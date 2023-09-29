@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Link from "next/link";
 import IMG from "@/assets/svg/black-guy.svg";
 import DOTS from "@/assets/svg/dots.svg";
 import OUTLINE_LOGO from "@/assets/svg/big-logo.svg";

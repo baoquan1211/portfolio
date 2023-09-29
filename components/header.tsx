@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { ModeToggle } from "./mode-toggle";
 import Image from "next/image";
 
 import LOGO from "@/assets/svg/logo.svg";

@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
 import LOGO from "@/assets/svg/logo.svg";
 import PURPLE_LOGO from "@/assets/svg/logo-purple.svg";

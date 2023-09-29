@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+
 const fira = Fira_Code({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],

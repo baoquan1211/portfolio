@@ -1,4 +1,6 @@
-import React, { useEffect } from "react";
+"use client";
+
+import React from "react";
 import { type IProject } from "./projects";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
