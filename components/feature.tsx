@@ -36,8 +36,8 @@ const Feature = () => {
           <div className="flex items-center gap-3 border-secondary border-[1px] p-2 w-[80%]">
             <div className="w-3 h-3 bg-primary " />
             <div className="font-fira font-medium text-secondary h-fit text-[16px] leading-none">
-              Current working at{" "}
-              <span className="font-bold text-foreground">FUJINET</span>
+              Current studying at{" "}
+              <span className="font-bold text-foreground">HCMUS</span>
             </div>
           </div>
         </div>
