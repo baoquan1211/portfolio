@@ -73,7 +73,7 @@ const Header = () => {
         </div>
         <Button
           variant={"link"}
-          className="text-secondary-foreground hover:text-primary md:hidden"
+          className="text-secondary-foreground hover:text-primary md:hidden p-0 h-fit"
           onClick={() => {
             setIsBurgerOpen((prev) => {
               return !prev;

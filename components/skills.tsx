@@ -75,7 +75,7 @@ const Skill = () => {
           <div className="flex lg:flex-col gap-3">
             <SkillCard
               title="Languages"
-              items={["TypeScript C++", "Python C#"]}
+              items={["TypeScript C++", "Python Java"]}
             />
 
             <SkillCard
@@ -87,11 +87,15 @@ const Skill = () => {
           <div className="flex lg:flex-col gap-3">
             <SkillCard
               title="Frameworks"
-              items={["NextJS", "ReactJS ExpressJS", "Django .NET"]}
+              items={["NextJS", "ReactJS ExpressJS", "Django Spring"]}
             />
             <SkillCard
               title="Tools"
-              items={["VSCode PyCharm Jira", "Figma Git", "Postman Docker"]}
+              items={[
+                "VSCode PyCharm Jira",
+                "Figma Git IntelliJ",
+                "Postman Docker",
+              ]}
             />
           </div>
         </div>
