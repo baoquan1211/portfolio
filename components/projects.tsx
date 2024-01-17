@@ -25,7 +25,7 @@ const fGPT: IProject = {
   name: "F-GPT",
   tech: "ReactJS Django HTML TailwindCSS PostgreSQL",
   git: "https://github.com/baoquan1211/f-gpt-webapp",
-  live: "https://f-gpt-webapp.vercel.app/",
+  live: "https://f-gpt-chat.vercel.app/",
 };
 
 const Projects = () => {
